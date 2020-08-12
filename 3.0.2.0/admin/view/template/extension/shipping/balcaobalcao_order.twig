@@ -1,0 +1,18 @@
+{% if custom_fields is not empty %}
+<div class="table-responsive">
+  <table class="table table-bordered">
+  <tbody>
+  {% for custom_field in custom_fields %}
+  <tr>
+    <td>{{ custom_field.name }}</td>
+    <td>{{ custom_field.value }}</td>
+  </tr>
+  {% endfor %}
+  </tbody>
+  </table>
+</div>
+{% else %}
+<div class="col-12">
+  <p>{{ text_sale_tab }}</p>
+</div>
+{% endif %}
